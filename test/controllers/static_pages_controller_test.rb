@@ -1,49 +1,63 @@
 require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+    
+    def setup
+        @base_title = "AZ Hyperloop Team"
+    end
+    
   test "should get home" do
-    get static_pages_home_url
+    get root_path
     assert_response :success
+    assert_select "title", "AZ Hyperloop Team"
   end
 
   test "should get about" do
-    get static_pages_about_url
+    get about_path
     assert_response :success
+    assert_select "title", "About | #{@base_title}"
   end
 
   test "should get news" do
-    get static_pages_news_url
+    get news_path
     assert_response :success
+    assert_select "title", "News | #{@base_title}"
   end
 
   test "should get join" do
-    get static_pages_join_url
+    get join_path
     assert_response :success
+    assert_select "title", "Join Us | #{@base_title}"
   end
 
   test "should get contact" do
-    get static_pages_contact_url
+    get contact_path
     assert_response :success
+    assert_select "title", "Contact | #{@base_title}"
   end
 
   test "should get sponsors" do
-    get static_pages_sponsors_url
+    get sponsors_path
     assert_response :success
+    assert_select "title", "Sponsors | #{@base_title}"
   end
 
   test "should get design" do
-    get static_pages_design_url
+    get design_path
     assert_response :success
+    assert_select "title", "Design | #{@base_title}"
   end
 
   test "should get team" do
-    get static_pages_team_url
+    get team_path
     assert_response :success
+    assert_select "title", "Team | #{@base_title}"
   end
 
   test "should get support" do
-    get static_pages_support_url
+    get support_path
     assert_response :success
+    assert_select "title", "Sponsor Us | #{@base_title}"
   end
 
 end

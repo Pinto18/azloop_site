@@ -1,21 +1,12 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+    root 'static_pages#home'
 
-  get 'static_pages/about'
-
-  get 'static_pages/news'
-
-  get 'static_pages/join'
-
-  get 'static_pages/contact'
-
-  get 'static_pages/sponsors'
-
-  get 'static_pages/design'
-
-  get 'static_pages/team'
-
-  get 'static_pages/support'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    get '/about',    to: 'static_pages#about'
+    get '/news',     to: 'static_pages#news'
+    get '/join',     to: 'static_pages#join'
+    get '/contact',  to: 'static_pages#contact'
+    get '/sponsors', to: 'static_pages#sponsors'
+    get '/design',   to: 'static_pages#design'
+    get '/team',     to: 'static_pages#team'
+    get '/support',  to: 'static_pages#support'
 end
