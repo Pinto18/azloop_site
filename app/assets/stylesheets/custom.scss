@@ -4,6 +4,18 @@
 $gray-medium-light: #eaeaea;
 
 /****************************
+        Jumbotron
+*****************************/
+.jumbotron
+{
+    background-color:transparent !important;
+    h1
+    {
+        font-size: 2.5em;
+    }
+}
+
+/****************************
         Universal
 *****************************/
 
@@ -94,14 +106,14 @@ footer
 {
     margin-top: 45px;
     padding-top: 5px;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid black;
     color: $gray-light;
     a
     {
-        color: $gray;
+        color: black;
         &:hover
         {
-            color: $gray-darker;
+            color: black;
         }
     }
   //  small
